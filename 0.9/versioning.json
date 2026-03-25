@@ -1,0 +1,121 @@
+{
+  "buildTime": "2026-03-25T00:00:00.000Z",
+  "builtWith": {
+    "toolchain": "1.0.0-alpha.64",
+    "types": "1.0.0-alpha.64"
+  },
+  "repository": {
+    "name": "Arabic Extensions",
+    "description": "Arabic manga source extensions"
+  },
+  "sources": [
+    {
+      "id": "Manga3asq",
+      "name": "3asq",
+      "description": "Extension that pulls content from 3asq.org.",
+      "version": "1.0.1",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 117,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    },
+    {
+      "id": "LekManga",
+      "name": "LekManga",
+      "description": "Extension that pulls content from lek-manga.net.",
+      "version": "1.0.2",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 117,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    },
+    {
+      "id": "MangaStarz",
+      "name": "Manga Starz",
+      "description": "Extension that pulls content from manga-starz.net.",
+      "version": "1.0.2",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 117,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    },
+    {
+      "id": "AzoraMoon",
+      "name": "AzoraMoon",
+      "description": "Extension that pulls content from azoramoon.com.",
+      "version": "1.0.2",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 69,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    },
+    {
+      "id": "MangaTime",
+      "name": "MangaTime",
+      "description": "Extension that pulls content from mangatime.org.",
+      "version": "1.0.1",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 69,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    },
+    {
+      "id": "MangaFire",
+      "name": "MangaFire",
+      "description": "Extension that pulls content from mangafire.to.",
+      "version": "1.0.0",
+      "icon": "icon.png",
+      "language": "multi",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 101,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    }
+  ]
+}
