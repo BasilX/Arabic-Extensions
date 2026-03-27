@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangra Extensions</title>
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #fff; min-height: 100vh; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .header img { width: 80px; height: 80px; border-radius: 20px; margin-bottom: 16px; }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { color: #8e8ea0; font-size: 16px; margin-bottom: 24px; }
+        .add-btn { display: inline-block; padding: 14px 32px; background: #6c5ce7; color: #fff; text-decoration: none; border-radius: 30px; font-size: 16px; font-weight: 600; transition: transform 0.2s, opacity 0.2s; }
+        .add-btn:hover { opacity: 0.9; transform: scale(1.02); }
+        .section-title { font-size: 14px; text-transform: uppercase; color: #8e8ea0; letter-spacing: 1px; margin-bottom: 12px; }
+        .sources { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-bottom: 40px; }
+        .source-card { background: #16213e; border-radius: 16px; padding: 20px; display: flex; align-items: center; gap: 16px; }
+        .source-card img { width: 48px; height: 48px; border-radius: 12px; }
+        .source-info { flex: 1; }
+        .source-info h3 { font-size: 18px; margin-bottom: 4px; }
+        .source-info p { color: #8e8ea0; font-size: 14px; }
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-top: 6px; }
+        .badge-safe { background: #00b894; color: #fff; }
+        .footer { text-align: center; color: #8e8ea0; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #16213e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.webp" alt="Mangra">
+            <h1>Mangra Extensions</h1>
+            <p>Connect to your self-hosted manga server</p>
+            <a class="add-btn" id="addBtn" href="#">Add to Mangra</a>
+        </div>
+
+        <p class="section-title">Available Sources</p>
+        <div class="sources" id="sources"></div>
+
+        <div class="footer">
+            <p>These extensions allow you to connect Mangra to your personal Komga server.</p>
+        </div>
+    </div>
+
+    <script>
+        var REPO_URL = window.location.href.replace(/\/index\.html$/, '').replace(/\/$/, '');
+
+        // Set the deep link href on the button (same approach as Paperback)
+        var btn = document.getElementById('addBtn');
+        btn.href = 'mangra://addRepo?displayName=Mangra%20Extensions&url=' + encodeURIComponent(REPO_URL);
+
+        fetch('versioning.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                var container = document.getElementById('sources');
+                data.sources.forEach(function(source) {
+                    var card = document.createElement('div');
+                    card.className = 'source-card';
+                    card.innerHTML = '<img src="' + source.id + '/static/icon.png" alt="' + source.name + '">' +
+                        '<div class="source-info">' +
+                        '<h3>' + source.name + '</h3>' +
+                        '<p>' + (source.description || '') + '</p>' +
+                        '<span class="badge badge-safe">' + (source.contentRating || 'SAFE') + '</span>' +
+                        ' <span style="color:#8e8ea0;font-size:12px;">v' + source.version + '</span>' +
+                        '</div>';
+                    container.appendChild(card);
+                });
+            });
+    </script>
+</body>
+</html>
