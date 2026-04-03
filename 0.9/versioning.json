@@ -116,6 +116,60 @@
           "github": null
         }
       ]
+    },
+    {
+      "id": "AreaScans",
+      "name": "Area Scans",
+      "description": "Extension that pulls content from ar.areascans.org.",
+      "version": "1.0.0-alpha.1",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 85,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    },
+    {
+      "id": "DetectiveConanAr",
+      "name": "شبكة كونان العربية",
+      "description": "Detective Conan Arabic reading site (Madara Theme)",
+      "version": "1.0.0-alpha.1",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 85,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
+    },
+    {
+      "id": "AreaManga",
+      "name": "AreaManga",
+      "description": "Extension for AreaManga (Arabic)",
+      "version": "1.0.0-alpha.1",
+      "icon": "icon.png",
+      "language": "ar",
+      "contentRating": "SAFE",
+      "badges": [],
+      "capabilities": 85,
+      "developers": [
+        {
+          "name": "Arabic Extensions",
+          "website": null,
+          "github": null
+        }
+      ]
     }
   ]
 }
